@@ -1,7 +1,9 @@
 mattd - Matt Daemon
 -------------------
 
-.. image:: mattd.jpg
+.. image:: mattd/raw/master/mattd.jpg
+
+.. split here
 
 Example Usage
 -------------

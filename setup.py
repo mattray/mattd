@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1.03'
+version = '0.1.04'
 
 f = open('README.rst')
 lines = f.readlines()
 f.close()
-long_description="\n".join(lines)
+long_description="\n".join(lines).split('.. split here')[1]
 
 setup(name='mattd',
       version=version,
