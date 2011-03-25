@@ -12,7 +12,9 @@ setup(name='mattd',
       version=version,
       description="Matt Daemon is a tool.",
       long_description=long_description,
-      classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      classifiers=[
+          'Environment :: No Input/Output (Daemon)',
+      ], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       keywords='',
       author='Ralph Bean',
       author_email='ralph.bean@gmail.com',
