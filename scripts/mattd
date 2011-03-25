@@ -5,6 +5,7 @@ from mattd import createDaemon
 
 print "Starting Matt Daemon...",
 sys.stdout.flush()
+
 retCode = createDaemon()
 
 # The code, as is, will create a new file in the root directory, when
@@ -27,7 +28,9 @@ effective group ID = %s
 """ % (retCode, os.getpid(), os.getppid(), os.getpgrp(), os.getsid(0),
 os.getuid(), os.geteuid(), os.getgid(), os.getegid())
 
-open("mattd.log", "w").write(procParams + "\n")
+j = open("/home/rjbpop/mattd.log", "w")
+f.write(procParams + "\n")
+f.close()
 
 sys.exit(retCode)
 
