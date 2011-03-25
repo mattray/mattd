@@ -1,7 +1,7 @@
 mattd - Matt Daemon
 -------------------
 
-Matt Daemon is a tool.
+.. image:: mattd.jpg
 
 Example Usage
 -------------
