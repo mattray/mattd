@@ -1,0 +1,9 @@
+TODO
+----
+
+    - twitter updates on matt daemon
+    - ascii art for 'verbose status mode'
+        - maybe with google image search?
+    - puppet configuration so we can deploy matt daemon widely
+    - func module to query matt daemon
+    - .rpm and .deb specs
