@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1.02'
+version = '0.1.03'
 
 f = open('README.rst')
 lines = f.readlines()
@@ -10,7 +10,7 @@ long_description="\n".join(lines)
 
 setup(name='mattd',
       version=version,
-      description="Matt Daemon is a tool.",
+      description="Matt Daemon",
       long_description=long_description,
       classifiers=[
           'Environment :: No Input/Output (Daemon)',
