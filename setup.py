@@ -29,4 +29,7 @@ setup(name='mattd',
       entry_points="""
       # -*- Entry points: -*-
       """,
+      scripts=[
+          "scripts/mattd"
+      ]
       )
