@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1.04'
+version = '0.1.05'
 
 f = open('README.rst')
 lines = f.readlines()

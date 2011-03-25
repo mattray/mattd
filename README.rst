@@ -8,7 +8,20 @@ mattd - Matt Daemon
 Example Usage
 -------------
 
-``service mattd start``
+
+``$ service mattd start``
 
 Starting Matt Daemon... [ OK ]
+
+``$ service mattd status``
+
+Matt Daemon is running.
+
+``$ service mattd stop``
+
+You can't stop Matt Daemon.  Permission denied.  [FAILED]
+
+``$ sudo service mattd stop``
+
+Stopping Matt Daemon... [ OK ]
 
