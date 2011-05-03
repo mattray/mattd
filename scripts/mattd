@@ -2,35 +2,43 @@
 
 import os, sys
 from mattd import createDaemon
+from fabulous import utils, image
 
-print "Starting Matt Daemon...",
-sys.stdout.flush()
+if __name__ == '__main__':
+    try:
+        import PIL
+        print image.Image("mattd.jpg")
+    except ImportError as e:
+        print "No PIL installed.  I guess you don't get to see Matt D."
+    
+    print "Starting Matt Daemon...",
+    sys.stdout.flush()
 
-retCode = createDaemon()
+    retCode = createDaemon()
 
-# The code, as is, will create a new file in the root directory, when
-# executed with superuser privileges.  The file will contain the following
-# daemon related process parameters: return code, process ID, parent
-# process group ID, session ID, user ID, effective user ID, real group ID,
-# and the effective group ID.  Notice the relationship between the daemon's 
-# process ID, process group ID, and its parent's process ID.
+    # The code, as is, will create a new file in the root directory, when
+    # executed with superuser privileges.  The file will contain the following
+    # daemon related process parameters: return code, process ID, parent
+    # process group ID, session ID, user ID, effective user ID, real group ID,
+    # and the effective group ID.  Notice the relationship between the daemon's 
+    # process ID, process group ID, and its parent's process ID.
 
-procParams = """
-return code = %s
-process ID = %s
-parent process ID = %s
-process group ID = %s
-session ID = %s
-user ID = %s
-effective user ID = %s
-real group ID = %s
-effective group ID = %s
-""" % (retCode, os.getpid(), os.getppid(), os.getpgrp(), os.getsid(0),
-os.getuid(), os.geteuid(), os.getgid(), os.getegid())
+    procParams = """
+    return code = %s
+    process ID = %s
+    parent process ID = %s
+    process group ID = %s
+    session ID = %s
+    user ID = %s
+    effective user ID = %s
+    real group ID = %s
+    effective group ID = %s
+    """ % (retCode, os.getpid(), os.getppid(), os.getpgrp(), os.getsid(0),
+    os.getuid(), os.geteuid(), os.getgid(), os.getegid())
 
-j = open("/home/rjbpop/mattd.log", "w")
-f.write(procParams + "\n")
-f.close()
+    j = open("/home/rjbpop/mattd.log", "w")
+    f.write(procParams + "\n")
+    f.close()
 
-sys.exit(retCode)
+    sys.exit(retCode)
 

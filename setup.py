@@ -24,6 +24,7 @@ setup(name='mattd',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
+          "fabulous",
           # -*- Extra requirements: -*-
       ],
       entry_points="""
